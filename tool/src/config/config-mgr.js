@@ -8,6 +8,7 @@ const ajv = new Ajv()
 const validate = ajv.compile(schema)
 const configLoader = cosmiconfigSync('tool')
 
+// This config is not being is used at this moment
 module.exports = function getConfig() {
   const result = configLoader.search(process.cwd())
   if (!result) {
